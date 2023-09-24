@@ -241,9 +241,9 @@ class MentionsInput extends React.Component {
       <div {...style('control')}>
         {this.renderHighlighter()}
         {as ? <as ref={this.setInputRef} {...props} /> : (
-          {singleLine
+          singleLine
             ? this.renderInput(inputProps)
-            : this.renderTextarea(inputProps)}
+            : this.renderTextarea(inputProps)
         )}
       </div>
     )
