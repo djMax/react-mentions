@@ -7,16 +7,16 @@ Used in production at [Signavio](https://signavio.com), [State](https://state.co
 
 ## Getting started
 
-Install the _react-mentions_ package via npm:
+Install the _react-mentions-formik_ package via npm:
 
 ```
-npm install react-mentions --save
+npm install react-mentions-formik --save
 ```
 
 Or yarn:
 
 ```
-yarn add react-mentions
+yarn add react-mentions-formik
 ```
 
 The package exports two React components for rendering the mentions textarea:
