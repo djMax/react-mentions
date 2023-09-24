@@ -66,6 +66,11 @@ const KEY = { TAB: 9, RETURN: 13, ESC: 27, UP: 38, DOWN: 40 }
 let isComposing = false
 
 const propTypes = {
+  as? PropTypes.oneOfType([
+    PropTypes.string,                         // For HTML tags like 'div', 'span', etc.
+    PropTypes.func,                           // For functional components
+    PropTypes.shape({ render: PropTypes.func }) // For class components
+  ]),
   /**
    * If set to `true` a regular text input element will be rendered
    * instead of a textarea
@@ -229,15 +234,17 @@ class MentionsInput extends React.Component {
   }
 
   renderControl = () => {
-    let { singleLine, style } = this.props
+    let { as, singleLine, style } = this.props
     let inputProps = this.getInputProps()
 
     return (
       <div {...style('control')}>
         {this.renderHighlighter()}
-        {singleLine
-          ? this.renderInput(inputProps)
-          : this.renderTextarea(inputProps)}
+        {as ? <as ref={this.setInputRef} {...props} /> : (
+          {singleLine
+            ? this.renderInput(inputProps)
+            : this.renderTextarea(inputProps)}
+        )}
       </div>
     )
   }
