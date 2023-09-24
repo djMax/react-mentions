@@ -2,8 +2,8 @@
   "name": "react-mentions-formik",
   "version": "1.0.0",
   "description": "React mentions input with support for Formik",
-  "main": "dist/react-mentions.cjs.js",
-  "module": "dist/react-mentions.esm.js",
+  "main": "dist/react-mentions-formik.cjs.js",
+  "module": "dist/react-mentions-formik.esm.js",
   "files": [
     "dist"
   ],
