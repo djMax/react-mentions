@@ -66,7 +66,7 @@ const KEY = { TAB: 9, RETURN: 13, ESC: 27, UP: 38, DOWN: 40 }
 let isComposing = false
 
 const propTypes = {
-  as? PropTypes.oneOfType([
+  as: PropTypes.oneOfType([
     PropTypes.string,                         // For HTML tags like 'div', 'span', etc.
     PropTypes.func,                           // For functional components
     PropTypes.shape({ render: PropTypes.func }) // For class components
